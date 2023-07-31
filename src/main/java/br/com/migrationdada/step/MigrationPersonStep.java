@@ -24,7 +24,7 @@ public class MigrationPersonStep {
                                 @Qualifier("personinvalidwriter") FlatFileItemWriter personinvalidwriter){
         return builderFactory
                 .get("migration_person")
-                .<Person, Person>chunk(1)
+                .<Person, Person>chunk(50)
                 .reader(personreader)
                 .writer(personclassifierwriter)
                 .stream(personinvalidwriter)
