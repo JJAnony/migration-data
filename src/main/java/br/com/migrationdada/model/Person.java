@@ -2,6 +2,7 @@ package br.com.migrationdada.model;
 
 
 import lombok.Data;
+import org.apache.logging.log4j.util.Strings;
 
 import java.time.LocalDateTime;
 
@@ -18,6 +19,9 @@ public class Person {
 
     private int age;
 
+    public boolean isValid(){
+        return !Strings.isBlank(name) && !Strings.isBlank(email) && dateOfBirth != null;
+    }
 
 
 }
