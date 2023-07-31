@@ -1,0 +1,15 @@
+server:
+  port: 8080
+
+# Database configuration
+spring:
+  batch:
+    initialize-schema: always
+  datasource:
+    driver-class-name: # driver
+    url: # url
+    username: # username
+    password: # password
+  jpa:
+    hibernate:
+      ddl-auto: update
